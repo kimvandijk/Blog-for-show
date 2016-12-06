@@ -1,0 +1,93 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html, body {
+	height: 100%;
+	padding-top: 60px;
+	background-color: rgba(233, 30, 99, 0.02);
+}
+
+
+#container {
+	min-height: 100%;
+	height: auto;
+	margin-bottom: -25px; /* hoogte footer */
+}
+
+#spacer {
+	display: block;
+	height: 25px; /* hoogte footer */
+}
+
+/* Header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: rgb(251, 193, 221);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  clear: both;
+	height: 25px; /* hoogte footer */
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+
+/* Welcome-page */
+#welcome {
+	text-align: center;
+}
+
+#welcome a {
+	margin: 10px;
+}
+
+/* Typography */
+
+#welcome a {
+	font-size: 1.2em;
+}
+
+a {
+	color: rgb(251, 193, 221);
+}

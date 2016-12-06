@@ -9,6 +9,11 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <div class="container" id="container">
+      <%= yield %>
+      <div id="spacer"></div>
+    </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

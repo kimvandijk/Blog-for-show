@@ -1,3 +1,9 @@
-<h1>Hello, Rails!</h1>
-<%= link_to 'My Blog', controller: 'articles' %>
-<%= link_to 'New article', new_article_path %>
+<div class="container" id="welcome">
+	<h1>Welcome to this blog for show!</h1>
+	<%= link_to ' See the articles ', controller: 'articles' %>
+	<%= link_to ' Create a new article ', new_article_path %>
+	<br>
+	<%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+
+	<%= link_to image_tag("mac_marble_pink_gold.jpg", alt: "Macbook girly", class: "img-responsive")%>
+</div>
