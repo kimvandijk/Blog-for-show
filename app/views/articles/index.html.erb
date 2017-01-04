@@ -1,21 +1,18 @@
-<h1>Listing Articles</h1>
-<%= link_to 'New article', new_article_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="3"></th>
-  </tr>
- 
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
+<div class="container-fluid article_index">
+  <div class="row">
+    <header><h1>Articles</h1></header>
+    <div class="col-md-12">
+      <% @articles.each do |article| %>
+        <h3><%= article.title %></h3>
+        <p><%= simple_format(article.text) %></p>
+        <%= link_to 'Show', article_path(article) %>
+        <% if signed_in? %>
+           | <%= link_to 'Edit', edit_article_path(article) %> | <%= link_to 'Destroy', article_path(article),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
+              data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>  
+</div>
+<%= will_paginate @acticles %>

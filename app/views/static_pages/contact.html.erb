@@ -1,0 +1,35 @@
+<body id="contact_page">
+	<div class="container-fluid" id="contact" >
+  	<div class="header">
+  	<h1>Contact us</h1>
+  	<h3>If you have a question for us about our products or if you want to make a special order let us know!</h3>
+  	</div><!-- end header -->
+  	<%= flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you") do %>
+<div class="row">
+	<div class=""col-md-4>
+		<div class="form-group">
+			<%= label_tag :name, "Name *" %>
+			<%= text_field_tag :name, nil, class: "form-control", :required => true, placeholder: "Enter Name" %>
+		</div> 
+		<div class="form-group">
+			<%= label_tag :phone, "Phone number *" %>
+			<%= text_field_tag :phone, nil, class: "form-control", :required => true, placeholder: "Enter Phone number" %>
+		</div>     
+		<div class="form-group">
+			<%= label_tag :email, "Email Address *" %>
+			<%= text_field_tag :email, nil, class: "form-control", :required => true, placeholder: "Enter Email" %>
+		</div>
+		<div class="form-group">
+			<%= label_tag :message, "Your message below. *" %>
+			<%= text_area_tag :message, nil, class: "form-control", style: "resize:none", cols: "40", rows: "5", :required => true, placeholder: "Enter Message" %>
+			<p id="char-count"></p><p id="visible-comment"></p>
+		</div>
+	</div>  
+</div>	
+<%= submit_tag("Send", class: "btn btn-default") %>  
+<% end %>
+
+	</div>
+</body>
