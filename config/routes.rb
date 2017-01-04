@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   	resources :comments
   end
 
-  root 'welcome#index'
+  root 'static_pages#index'
 
-  get 'welcome/index'
+  get 'static_pages/index'
 
   get 'static_pages/contact'
 
