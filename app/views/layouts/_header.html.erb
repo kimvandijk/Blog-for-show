@@ -15,7 +15,8 @@
       <ul class="nav navbar-nav">
         <li><%= link_to 'Articles', articles_path %></li>
         <li><%= link_to 'New article', new_article_path %></li>
-          <%= form_tag("/products", method: "get", class: "row") do %>
+        <li role="search" id="search">
+          <%= form_tag(articles_path, method: "get", class: "row") do %>
             <%= text_field_tag(:q) %>
             <%= submit_tag "Search", name: nil %>
           <% end %>
@@ -24,11 +25,10 @@
       <ul class="nav pull-right">
         <li>
           <% if user_signed_in? %>
-        Signed in as <%= current_user.email %>
-        <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
-    <% else %>
-        <%= link_to 'Sign in', new_user_session_path %>
-    <% end %>
+            <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+          <% else %>
+            <li><%= link_to('Sign in', new_user_session_path) %></li>
+          <% end %>
         </li>
       </ul>
     </div>
